@@ -1,0 +1,31 @@
+<html>
+
+<body>
+
+    <h1>Count</h1>
+    <h2>There are <span style='color:red'> {{count}} </span> words in your text</h2>
+
+    <a href="{% url 'home' %}">Start Again!</a>
+
+    <h1>Your text: </h1>
+    {{ fulltext }}
+
+
+    <h1> Word count: </h1>
+
+    <ul>
+        {% for word, cpt in sortedwords %}
+        <li>
+            {{ word }} : {{ cpt }}
+        </li>
+    </ul>
+
+
+
+    <br>
+
+    {% endfor %}
+    <br>
+</body>
+
+</html>
